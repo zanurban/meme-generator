@@ -38,8 +38,8 @@ Local installation
 1. Clone the repository:
 
 ```bash
-git clone <REPO_URL>
-cd <REPO_FOLDER>
+git clone [<REPO_URL>](https://github.com/zanurban/meme-generator.git)
+cd meme-generator
 ```
 
 2. Confirm these files are present: `app.py`, `requirements.txt`, `Dockerfile`, `templates/` and, if used, `docker-compose.yml`.
@@ -125,24 +125,3 @@ You can add a workflow at `.github/workflows/docker-build.yml` that triggers on 
 - run the built image and perform a simple HTTP health-check against the application root
 
 Note: the workflow does not push images to a registry; it only validates a successful build and basic health of the container.
-
-Checklist (for submission)
---------------------------
-- [ ] The repository is publicly available on GitHub.
-- [ ] The repository contains the application source code, a `Dockerfile`, and this `README.md` with run instructions.
-- [ ] (If applicable) `docker-compose.yml` exists and works.
-- [ ] Locally tested: `docker build -t meme-generator:latest .` and `docker run --rm -p 5000:5000 meme-generator:latest` with `http://localhost:5000/` reachable.
-- [ ] PDF report contains the repository URL and a screenshot of the repository main page.
-- [ ] (Bonus) `.github/workflows/docker-build.yml` exists and validates the Docker build on push.
-
-Contact and license
--------------------
-Open an issue in the repository or add contact details here. Optionally add a `LICENSE` file (for example, MIT).
-
----
-
-If you want I can:
-- add a `.dockerignore` file to the repo,
-- keep a backup of the previous README as `README.backup.md`,
-- add an English-to-Slovenian or more formal translation,
-- or adjust the GitHub Actions workflow to run tests or push built images to a registry.
